@@ -1,9 +1,9 @@
-abstract class Room {
+abstract class RoomUC2 {
     String type;
     int beds;
     double price;
 
-    Room(String type, int beds, double price) {
+    RoomUC2(String type, int beds, double price) {
         this.type = type;
         this.beds = beds;
         this.price = price;
@@ -16,19 +16,19 @@ abstract class Room {
     }
 }
 
-class SingleRoom extends Room {
+class SingleRoom extends RoomUC2 {
     SingleRoom() {
         super("Single Room", 1, 1000);
     }
 }
 
-class DoubleRoom extends Room {
+class DoubleRoom extends RoomUC2 {
     DoubleRoom() {
         super("Double Room", 2, 2000);
     }
 }
 
-class SuiteRoom extends Room {
+class SuiteRoom extends RoomUC2 {
     SuiteRoom() {
         super("Suite Room", 3, 5000);
     }
@@ -37,9 +37,9 @@ class SuiteRoom extends Room {
 public class UseCase2RoomInitialization {
     public static void main(String[] args) {
 
-        Room r1 = new SingleRoom();
-        Room r2 = new DoubleRoom();
-        Room r3 = new SuiteRoom();
+        RoomUC2 r1 = new SingleRoom();
+        RoomUC2 r2 = new DoubleRoom();
+        RoomUC2 r3 = new SuiteRoom();
 
         int singleAvailable = 5;
         int doubleAvailable = 3;
